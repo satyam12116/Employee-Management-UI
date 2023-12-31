@@ -1,0 +1,21 @@
+<nav class="nav">
+    <h2 routerLink="" (click)="handler()" style="padding-top: 10px;">Employee Management</h2>
+  
+    <div [ngSwitch]="menuType">
+      <ul *ngSwitchCase="'default'">
+        <button type="button" class="btn btn-white mx-5 mx-lg-3 my-2 my-lg-0 px-3 shadow-lg" routerLink="user-auth">User</button>
+        <button type="button" class="btn btn-green mx-5 mx-lg-3 my-2 my-lg-0 px-3 shadow-lg" routerLink="admin-auth">admin</button>
+      </ul>
+      <ul *ngSwitchCase="'adminDashboard'">
+        <li><a (click)="handler()" routerLink="">Log Out </a></li>
+
+      </ul>
+      <ul *ngSwitchCase="'userDashboard'">
+        <li><a (click)="handler()"routerLink="">Log Out </a></li>
+
+      </ul>
+    </div>
+  </nav>
+  <div>
+    <hr>
+  </div>

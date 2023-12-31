@@ -1,0 +1,66 @@
+{
+  "signup": [
+    {
+      "id": 1,
+      "fist_name": "Ramit",
+      "last_name": "kumar",
+      "city": "Patna",
+      "gender": "Male",
+      "state": "Bihar",
+      "contact_no": 998877887,
+      "email": "ramit@gmail.com",
+      "password": "ramit"
+    },
+    {
+      "fist_name": "Akash",
+      "last_name": "Kumar",
+      "city": "ranchi",
+      "gender": "male",
+      "state": "Jharkhand",
+      "contact_no": 9876546765,
+      "email": "akash@gmail.com",
+      "password": "akash",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "fist_name": "Rubiga",
+      "last_name": "Vertri",
+      "city": "dharmapuri",
+      "gender": "Female",
+      "state": "Tamil Nadu",
+      "contact_no": 78766767676,
+      "email": "rubiga@gmail.com",
+      "password": "rubiga"
+    }
+  ],
+  "carRequest": [
+    {
+      "customerId": "1",
+      "carType": "SUV",
+      "days": "4",
+      "requestDate": "2023-04-17",
+      "status": "rejected",
+      "id": 1
+    },
+    {
+      "customerId": 2,
+      "carType": "SUV",
+      "days": "7",
+      "requestDate": "2023-04-28",
+      "status": "approved",
+      "id": 2
+    },
+    {
+      "customerId": 3,
+      "carType": "SUV",
+      "days": "5",
+      "requestDate": "2023-04-25",
+      "status": "approved",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

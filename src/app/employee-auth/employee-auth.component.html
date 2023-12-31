@@ -1,0 +1,85 @@
+
+<div *ngIf="showLogin">
+    <div class="container-fluid my-5 p-5 card shadow-lg bg-white rounded border-0" style="width: auto;">
+      <div class="row d-flex justify-content-between align-items-center py-lg-4 px-4">
+  
+  
+          <div class="col-lg-4 mb-3">
+              <h4 class="h2 text-center d-none d-lg-block">Log In</h4>
+              <form (submit)="login()">
+                  <div class="mb-4 form-group">
+                      <label for="username" class="form-label lsp weig1 mt-5">Username</label>
+                      <input type="text" class="form-control mt-2 pd py-4 lsp weig2 border-0 brad" id="username"
+                          name="username"formControlName="email" placeholder="JohnDoe19"
+                          required />
+                      
+                  </div>
+  
+                  <div class="mb-3 form-group">
+                      <label for="password" class="form-label lsp weig1">Password</label>
+                      <input type="password" class="form-control mt-2 py-4 pd lsp weig2 border-0 brad" id="password"
+                          name="password" formControlName="password" placeholder="********"
+                          required />
+                  </div>
+  
+                  <button type="submit" class="btn color px-5 lsp mt-5 shadow-lg" style="margin:auto;display:block"
+                     >
+                      LOGIN
+                  </button>
+              </form>
+  
+          </div>
+      </div>
+  </div>
+    <div style="text-align: center">
+      <a
+        style=" cursor: pointer"
+        class="auth-toggle-link h3"
+        (click)="openSignUp()"
+        >Don't have account? Click for sign-up</a
+      >
+    </div>
+  </div>
+  
+  <div *ngIf="!showLogin">
+    <div class="container-fluid my-5 p-5 card shadow-lg bg-white rounded border-0" style="width: auto;">
+      <div class="row d-flex justify-content-between align-items-center py-lg-4 px-4">
+  
+  
+          <div class="col-lg-4 mb-3">
+              <h4 class="h2 text-center d-none d-lg-block">Sign Up</h4>
+              <form  [formGroup]="customerForm" (submit)="signUp()">
+                  <div class="mb-4 form-group">
+                      <label for="username" class="form-label lsp weig1 mt-5">Username</label>
+                      <input type="text" class="form-control mt-2 pd py-4 lsp weig2 border-0 brad" id="username"
+                          name="username"formControlName="email" placeholder="JohnDoe19"
+                          required />
+                      
+                  </div>
+  
+                  <div class="mb-3 form-group">
+                      <label for="password" class="form-label lsp weig1">Password</label>
+                      <input type="password" class="form-control mt-2 py-4 pd lsp weig2 border-0 brad" id="password"
+                          name="password" formControlName="password" placeholder="********"
+                          required />
+                  </div>
+  
+                  <button type="submit" class="btn color px-5 lsp mt-5 shadow-lg" style="margin:auto;display:block"
+                     >
+                     Sign Up
+                  </button>
+              </form>
+  
+          </div>
+      </div>
+  </div>
+  
+    <div style="text-align: center">
+      <a
+        style=" cursor: pointer"
+        class="auth-toggle-link h3"
+        (click)="openLogin()"
+        >Go back to login page</a
+      >
+    </div>
+  </div>

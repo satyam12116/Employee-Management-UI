@@ -1,0 +1,29 @@
+<div class="sidebar">
+  <mat-icon (click)="profile()">account_circle</mat-icon>
+  <a (click)="profile()">Profile</a>
+  <mat-icon (click)="empList()">list_alt</mat-icon>
+  <a (click)="empList()">Employee List</a>
+  <mat-icon (click)="add()">library_add</mat-icon>
+  <a (click)="add()">Add Employee</a>
+</div>
+
+<div class="content">
+  <mat-card *ngIf="showProfile">
+    <div style="text-align: right">
+      <mat-icon (click)="approve(customer)">edit</mat-icon>
+    </div>
+    <div>Employee ID : {{ customer?.employeeID}}</div>
+    <div>First Name : {{ customer?.fistname}}</div>
+    <div>Last Name : {{ customer?.lastname }}</div>
+    <div>Full Name : {{ customer?.fullname }}</div>
+    <div>Gender : {{ customer?.gender }}</div>
+    <div>Designation : {{ customer?.designation }}</div>
+    <div>Role : {{ customer?.role }}</div>
+    <div>Email : {{ customer?.email }}</div>
+  </mat-card>
+
+  <app-employee-list *ngIf="showListEmp"></app-employee-list>
+  <app-add-new-employee *ngIf="addEmp"></app-add-new-employee>
+</div>
+
+  
